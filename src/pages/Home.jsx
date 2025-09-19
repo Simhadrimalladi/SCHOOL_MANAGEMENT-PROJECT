@@ -16,7 +16,7 @@ function HomePage() {
     fetchStats();
   }, []);
 
-  if (!stats) return <p>Loading...</p>;
+  if (!stats) return <p>Loading......</p>;
 
   return (
     <div>
