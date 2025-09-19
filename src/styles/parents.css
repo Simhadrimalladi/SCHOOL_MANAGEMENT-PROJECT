@@ -1,0 +1,254 @@
+/* src/styles/parents.css */
+
+.parent-container {
+  max-width: 900px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Parents Table */
+.parent-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.parent-table:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.parent-table th,
+.parent-table td {
+  padding: 15px 20px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* Serial Number (S.No) column */
+.parent-table th.serial,
+.parent-table td.serial {
+  width: 60px;
+  text-align: center;
+  font-weight: 700;
+  background-color: #eef2ff; /* light indigo */
+  color: #4f46e5;
+  user-select: none;
+  border-right: 1px solid #ddd;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.parent-table th.serial {
+  background-color: #c7d2fe; /* stronger indigo for header */
+  font-size: 1.1rem;
+}
+
+/* Last header cell rounded corners */
+.parent-table th:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* Table header */
+.parent-table th {
+  background-color: #4f46e5; /* Indigo */
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Table rows */
+.parent-table tbody tr {
+  background-color: #fafafa;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+
+.parent-table tbody tr:hover {
+  background-color: #e0e7ff; /* light indigo */
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+}
+
+/* Buttons in table */
+.action-btn {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #3b82f6; /* blue */
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2563eb;
+}
+
+.delete-btn {
+  background-color: #ef4444; /* red */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Parent Form */
+.parent-form {
+  background: #fff;
+  padding: 30px 40px;
+  margin-top: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+}
+
+.parent-form h2 {
+  margin-bottom: 24px;
+  color: #4f46e5;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.parent-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.parent-form input,
+.parent-form select,
+.parent-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.parent-form input:focus,
+.parent-form select:focus,
+.parent-form textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.4);
+}
+
+/* Buttons */
+.parent-form button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 14px 25px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 15px;
+}
+
+.parent-form button:hover {
+  background-color: #3730a3;
+  box-shadow: 0 6px 20px rgba(55, 48, 163, 0.5);
+}
+
+.parent-form button:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Pagination container */
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Pagination buttons */
+.pagination button {
+  background-color: #4f46e5;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #3730a3;
+  box-shadow: 0 6px 20px rgba(55, 48, 163, 0.5);
+}
+
+.pagination button:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Page numbers */
+.pagination .page-num {
+  padding: 8px 12px;
+  font-weight: 600;
+  color: #4f46e5;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination .page-num:hover {
+  background-color: #c7d2fe;
+}
+
+.pagination .page-num.active {
+  background-color: #4f46e5;
+  color: white;
+  cursor: default;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 700px) {
+  .parent-container {
+    margin: 20px 10px;
+  }
+
+  .parent-form {
+    padding: 20px;
+  }
+
+  .parent-table th,
+  .parent-table td {
+    padding: 12px 10px;
+  }
+
+  .parent-table th.serial,
+  .parent-table td.serial {
+    width: 40px;
+  }
+}

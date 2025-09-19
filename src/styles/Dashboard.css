@@ -1,0 +1,192 @@
+/* ─────────  ROOT TOKENS  ───────── */
+:root {
+  --clr-bg-1:#f6f8fc;
+  --clr-bg-2:#e8f1ff;
+
+  --clr-surface:#ffffff;
+  --clr-surface-hover:#e8f5e9;
+
+  --clr-accent:#4caf50;
+
+  --clr-text-dark:#1e2a38;
+  --clr-text-muted:#566573;
+
+  --radius:1rem;
+  --shadow-sm:0 2px 8px rgba(0,0,0,.06);
+  --shadow-md:0 6px 22px rgba(0,0,0,.12);
+
+  --trans-fast:.18s cubic-bezier(.4,0,.2,1);
+  --trans-med:.35s cubic-bezier(.4,0,.2,1);
+}
+
+/* ─────────  LAYOUT  ───────── */
+.dashboard-layout{
+  display:flex;
+  min-height:100vh;
+  background:linear-gradient(120deg,var(--clr-bg-1),var(--clr-bg-2));
+  font-family:'Segoe UI','Roboto',sans-serif;
+  overflow-x:hidden;
+}
+
+/* ─────────  SIDEBAR  ───────── */
+.sidebar{
+  position:fixed;
+  inset:0 auto 0 0;
+  width:16rem;
+  height:100vh;
+  padding:2rem 1.25rem;
+  background:linear-gradient(135deg,#131b28,#27344b);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  overflow-y:auto;
+  box-shadow:var(--shadow-sm);
+  z-index:20;
+  user-select:none;
+}
+.sidebar .logo{
+  font-size:1.75rem;
+  font-weight:700;
+  text-align:center;
+  color:#ffcc00;
+  margin-bottom:2.25rem;
+  letter-spacing:.12rem;
+}
+.sidebar ul{margin:0;padding:0;list-style:none;}
+.sidebar li{
+  display:flex;
+  align-items:center;
+  gap:.9rem;
+  padding:.8rem 1rem;
+  margin:.45rem 0;
+  border-radius:var(--radius);
+  cursor:pointer;
+  transition:background var(--trans-fast),transform var(--trans-fast);
+}
+.sidebar li:hover{background:rgba(255,255,255,.08);}
+.sidebar li.active{
+  background:var(--clr-accent);
+  transform:translateX(.5rem);
+}
+
+/* ─────────  MAIN CONTENT  ───────── */
+.main-content{
+  margin-left:16rem;
+  padding:2.5rem 2rem;
+  flex:1 1 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:var(--clr-bg-1);
+  box-sizing:border-box;
+  overflow-y:auto;
+}
+.main-heading{
+  text-align:center;
+  font-size:2rem;
+  font-weight:800;
+  color:var(--clr-text-dark);
+  text-transform:uppercase;
+  letter-spacing:.09rem;
+  margin-bottom:2rem;
+}
+.main-heading::after{
+  content:'';
+  display:block;
+  width:5rem;
+  height:.28rem;
+  background:var(--clr-accent);
+  margin:.7rem auto 0;
+  border-radius:.25rem;
+}
+
+/* ─────────  COLUMN CARDS  ───────── */
+.stat-column{
+  width:100%;
+  max-width:650px;
+  display:flex;
+  flex-direction:column;
+  gap:1.4rem;
+}
+
+.stat-card{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1.3rem 1.6rem;
+  width:100%;
+  background:var(--clr-surface);
+  border-left:6px solid var(--clr-accent);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  cursor:pointer;
+  overflow:hidden;
+  transition:transform var(--trans-med),box-shadow var(--trans-med),background var(--trans-med);
+}
+
+/* soft aura ring */
+.stat-card::before{
+  content:'';
+  position:absolute;
+  inset:-10px;
+  border-radius:inherit;
+  background:radial-gradient(circle at 20% 120%,var(--clr-accent) 0%,transparent 60%);
+  opacity:0;
+  transform:scale(.85);
+  transition:opacity var(--trans-med),transform var(--trans-med);
+  z-index:-1;
+}
+
+.stat-card:hover{
+  background:var(--clr-surface-hover);
+  transform:translateY(-3px) scale(1.015);
+  box-shadow:var(--shadow-md);
+}
+.stat-card:hover::before{
+  opacity:.35;
+  transform:scale(1);
+}
+
+/* icon + micro‑motion */
+.stat-icon{
+  font-size:2.3rem;
+  color:var(--clr-accent);
+  margin-right:1rem;
+  transition:transform var(--trans-med);
+}
+.stat-card:hover .stat-icon{transform:rotate(-4deg) scale(1.1);}
+
+.stat-label{
+  flex:1;
+  font-size:1.15rem;
+  font-weight:600;
+  color:var(--clr-text-dark);
+}
+.stat-value{
+  font-size:1.75rem;
+  font-weight:700;
+  color:#2e7d32;
+  letter-spacing:.02rem;
+}
+
+/* ─────────  RESPONSIVE  ───────── */
+@media(max-width:768px){
+  .dashboard-layout{flex-direction:column;}
+  .sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+    padding:1rem;
+    flex-direction:row;
+    overflow-x:auto;
+  }
+  .sidebar ul{display:flex;flex-wrap:nowrap;}
+  .sidebar li{flex:0 0 auto;margin:0 .5rem;}
+  .main-content{margin-left:0;padding:1.5rem 1rem;}
+}
+@media(max-width:480px){
+  .stat-card{padding:1rem;}
+  .stat-label{font-size:1rem;}
+  .stat-value{font-size:1.45rem;}
+}

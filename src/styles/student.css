@@ -1,0 +1,248 @@
+/* ───── STUDENTS MODULE – enhanced to match TEACHERS styling ───── */
+
+.students-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+.students-container:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ------------ add student button */
+.add-student-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(40,167,69,0.4);
+  transition: all 0.3s ease;
+}
+.add-student-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(33,136,56,0.6);
+}
+
+/* ------------ form */
+.student-form {
+  margin-bottom: 30px;
+  background: #f9fafb;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
+  transition: box-shadow 0.3s ease;
+}
+.student-form:hover {
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.07);
+}
+.student-form h3 {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #1e2a4d;
+  letter-spacing: 0.05rem;
+}
+.student-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #3a3f58;
+}
+.student-form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1.8px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #3a3f58;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.student-form input:focus {
+  border-color: #0052cc;
+  box-shadow: 0 0 6px rgba(0,82,204,0.4);
+  outline: none;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+.form-actions button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.form-actions button[type="submit"] {
+  background-color: #0052cc;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,82,204,0.4);
+}
+.form-actions button[type="submit"]:hover {
+  background-color: #003d99;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,61,153,0.6);
+}
+.cancel-btn {
+  background-color: #e0e0e0;
+  color: #555;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.cancel-btn:hover {
+  background-color: #bdbdbd;
+  color: #333;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ------------ table */
+.student-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.student-table thead tr {
+  background-color: #0052cc;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.student-table th,
+.student-table td {
+  padding: 15px 18px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1rem;
+  background: white;
+  color: #444;
+  transition: background-color 0.3s ease;
+}
+.student-table tbody tr {
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.student-table tbody tr:hover {
+  background-color: #f1f6ff;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ------------ action buttons */
+.edit-btn,
+.delete-btn {
+  margin: 0 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.edit-btn {
+  background-color: #28a745;
+}
+.edit-btn:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(33,136,56,0.6);
+}
+.delete-btn {
+  background-color: #dc3545;
+}
+.delete-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(200,35,51,0.6);
+}
+
+/* ------------ pagination (optional support) */
+.pagination {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.pagination button {
+  background: #0052cc;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.pagination button:hover:not(:disabled) {
+  background: #003d99;
+}
+.pagination button:disabled {
+  background: #a6c5ff;
+  cursor: not-allowed;
+}
+.page-num {
+  padding: 9px 13px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #0052cc;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.page-num:hover {
+  background: #d9e6ff;
+}
+.page-num.active {
+  background: #0052cc;
+  color: #fff;
+  cursor: default;
+}
+
+/* ------------ responsive */
+@media (max-width: 768px) {
+  .students-container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .student-form input {
+    font-size: 0.95rem;
+  }
+  .student-table th,
+  .student-table td {
+    font-size: 0.9rem;
+    padding: 12px 10px;
+  }
+  .form-actions {
+    flex-direction: column;
+  }
+  .form-actions button {
+    width: 100%;
+  }
+}

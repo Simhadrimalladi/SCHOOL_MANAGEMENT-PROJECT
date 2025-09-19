@@ -1,0 +1,26 @@
+/* index.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f4f8;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}

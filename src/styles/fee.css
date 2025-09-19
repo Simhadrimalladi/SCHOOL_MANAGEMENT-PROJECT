@@ -1,0 +1,204 @@
+/* ───── FEES  MODULE – parity with Students styling ───── */
+
+.fees-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+.fees-container:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ------------ add-fee button */
+.add-fee-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(40,167,69,0.4);
+  transition: all 0.3s ease;
+}
+.add-fee-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(33,136,56,0.6);
+}
+
+/* ------------ form */
+.fee-form {
+  margin-bottom: 30px;
+  background: #f9fafb;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
+  transition: box-shadow 0.3s ease;
+}
+.fee-form:hover {
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.07);
+}
+.fee-form h3 {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #1e2a4d;
+  letter-spacing: 0.05rem;
+}
+.fee-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #3a3f58;
+}
+.fee-form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1.8px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #3a3f58;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.fee-form input:focus {
+  border-color: #0052cc;
+  box-shadow: 0 0 6px rgba(0,82,204,0.4);
+  outline: none;
+}
+.fee-form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+.fee-form .form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+.fee-form .form-actions button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.fee-form .form-actions button[type="submit"] {
+  background-color: #0052cc;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,82,204,0.4);
+}
+.fee-form .form-actions button[type="submit"]:hover {
+  background-color: #003d99;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,61,153,0.6);
+}
+.fee-form .cancel-btn {
+  background-color: #e0e0e0;
+  color: #555;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.fee-form .cancel-btn:hover {
+  background-color: #bdbdbd;
+  color: #333;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ------------ table */
+.fee-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.fee-table thead tr {
+  background-color: #0052cc;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.fee-table th,
+.fee-table td {
+  padding: 15px 18px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1rem;
+  background: #fff;
+  color: #444;
+  transition: background-color 0.3s ease;
+}
+.fee-table tbody tr {
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.fee-table tbody tr:hover {
+  background-color: #f1f6ff;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ------------ action buttons */
+.edit-btn,
+.delete-btn {
+  margin: 0 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.edit-btn {
+  background-color: #28a745;
+}
+.edit-btn:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(33,136,56,0.6);
+}
+.delete-btn {
+  background-color: #dc3545;
+}
+.delete-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(200,35,51,0.6);
+}
+
+/* ------------ responsive */
+@media (max-width: 768px) {
+  .fees-container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .fee-form input {
+    font-size: 0.95rem;
+  }
+  .fee-table th,
+  .fee-table td {
+    font-size: 0.9rem;
+    padding: 12px 10px;
+  }
+  .fee-form .form-actions {
+    flex-direction: column;
+  }
+  .fee-form .form-actions button {
+    width: 100%;
+  }
+}
